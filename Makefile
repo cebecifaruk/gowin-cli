@@ -11,7 +11,7 @@ project/project.gprj: project.tcl
 	rm -rf project
 	$(GOWIN_SH) $<
 
-project/impl/pnr/project.fs: project/project.gprj src/main.v pins.cst
+project/impl/pnr/project.fs: project/project.gprj src/main.v src/ws2812.v src/clk_div.v pins.cst
 	echo "open_project $<; run all"	| $(GOWIN_SH) -
 
 flash: project/impl/pnr/project.fs

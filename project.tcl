@@ -5,6 +5,8 @@ create_project -name project -dir . -pn GW2A-LV18PG256C8/I7 -device_version C
 
 # Import source files
 add_file "../src/main.v"
+add_file "../src/ws2812.v"
+add_file "../src/clk_div.v"
 add_file "../pins.cst"
 
 # Set top module
